@@ -7,3 +7,45 @@ a[href] {
     height: 100%;
     z-index: -1;
 }
+
+.window_dot {
+    border-radius: 50%;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 12px;
+    margin-right: 10px;
+    width: 12px
+}
+
+.window_title {
+    display: inline-block;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%)
+}
+
+.window_container {
+    background-color: #17202a;
+    border: 3px solid #17202a;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 20px 0 30px
+}
+
+.window_top {
+    background: #212f3d;
+    box-sizing: border-box;
+    padding: 5px
+}
+
+.bg-success {
+    background-color: #9fef00 !important
+}
+
+.bg-warning {
+    background-color: #ffaf00 !important
+}
+
+.bg-danger {
+    background-color: #ff3e3e !important
+}
