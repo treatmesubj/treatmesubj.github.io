@@ -27,10 +27,9 @@ a[href] {
 .window_container {
     background-color: rgb(23, 32, 42, 0.65);
     border: 3px solid #17202a;
-    border-radius: 4px;
+    border-radius: 6px;
     box-sizing: border-box;
-    margin-top: 20px;
-    margin-bottom: 30px;
+    margin-top: 20px; 
 }
 
 .window_top {
