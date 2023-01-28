@@ -21,11 +21,11 @@ a[href] {
    border-radius: 6px;
    padding-left: 8px;
    padding-right: 8px;
-   background-color: rgb(23, 32, 42, 0.65);  
+   background-color: rgb(23, 32, 42, 0.75);  
 }
 
 .window_container {
-    background-color: rgb(23, 32, 42, 0.65);
+    background-color: rgb(23, 32, 42, 0.75);
     border: 3px solid #17202a;
     border-radius: 6px;
     box-sizing: border-box;
