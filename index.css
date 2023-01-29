@@ -16,14 +16,6 @@ a[href] {
     z-index: -1;
 }
 
-.background_box {
-   border: 3px solid #17202a;
-   border-radius: 6px;
-   padding-left: 8px;
-   padding-right: 8px;
-   background-color: rgb(23, 32, 42, 0.75);  
-}
-
 .window_container {
     background-color: rgb(23, 32, 42, 0.75);
     border: 3px solid #17202a;
