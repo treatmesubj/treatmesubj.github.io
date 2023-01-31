@@ -18,7 +18,8 @@ a[href] {
 }
 
 .window_container {
-    background-color: rgb(23, 32, 42, 0.75);
+    /* background-color: rgb(23, 32, 42, 0.75); */
+    background-color: black;
     border: 3px solid #17202a;
     border-radius: 6px;
     box-sizing: border-box;
