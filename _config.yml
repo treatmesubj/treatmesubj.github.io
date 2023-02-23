@@ -1,6 +1,0 @@
-#Jekyll configuration
-name: John's test
-description: this might work
-url: "http://treatmesubj.github.io"
-markdown: kramdown
-highlighter: rouge
