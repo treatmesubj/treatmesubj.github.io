@@ -30,6 +30,7 @@ a[href] {
     left: 50%;
     position: absolute;
     transform: translateX(-50%);
+    font-weight: bold;
 }
 
 .window_dot {
