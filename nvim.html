@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>/mnt/c/Users/JohnHupperts/Documents/Programming_Projects/treatmesubj.github.io/tmp.html</title>
+<meta name="Generator" content="Vim/8.0">
+<meta name="plugin-version" content="vim8.1_v2">
+<meta name="syntax" content="html">
+<meta name="settings" content="number_lines,use_css,pre_wrap,no_foldcolumn,expand_tabs,line_ids,prevent_copy=,use_input_for_pc=fallback">
+<meta name="colorscheme" content="vim-monokai-tasty">
+<style>
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #ffffff; background-color: #262626; }
+body { font-family: monospace; color: #ffffff; background-color: #262626; overflow: hidden; }
+* { font-size: 1em; }
+.htmlArg { color: #afd700; }
+.Comment { color: #8a8a8a; font-style: italic; }
+.htmlTag { color: #ffffff; }
+.htmlEndTag { color: #ffffff; }
+.LineNr { color: #5f5f5f; }
+.LineNrMain { color: yellow; }
+.Underlined { text-decoration: underline; }
+.String { color: #ffff87; }
+.Statement { color: #ff005f; }
+td { white-space: pre; }
+-->
+</style>
+
+<script>
+<!--
+
+/* function to open any folds containing a jumped-to line before jumping to it */
+function JumpToLine()
+{
+  var lineNum;
+  lineNum = window.location.hash;
+  lineNum = lineNum.substr(1); /* strip off '#' */
+
+  if (lineNum.indexOf('L') == -1) {
+    lineNum = 'L'+lineNum;
+  }
+  var lineElem = document.getElementById(lineNum);
+  /* Always jump to new location even if the line was hidden inside a fold, or
+   * we corrected the raw number to a line ID.
+   */
+  if (lineElem) {
+    lineElem.scrollIntoView(true);
+  }
+  return true;
+}
+if ('onhashchange' in window) {
+  window.onhashchange = JumpToLine;
+}
+
+-->
+</script>
+</head>
+<body onload='JumpToLine();'>
+<pre id='vimCodeElement'>
+<span id="L1" class="LineNr">  3 </span><span class="Comment">&lt;!DOCTYPE html&gt;</span>
+<span id="L2" class="LineNr">  2 </span><span class="htmlTag">&lt;</span><span class="Statement">html</span><span class="htmlTag">&gt;</span>
+<span id="L3" class="LineNr">  1 </span>  <span class="htmlTag">&lt;</span><span class="Statement">a</span><span class="htmlTag"> </span><span class="htmlArg">href</span><span class="htmlTag">=</span><span class="String">&quot;<a href="https://www.nasdaq.com/glossary/t/treat-me-subject">https://www.nasdaq.com/glossary/t/treat-me-subject</a>&quot;</span><span class="htmlTag">&gt;</span><span class="Underlined">Treat me subject</span><span class="htmlEndTag">&lt;/</span><span class="Statement">a</span><span class="htmlEndTag">&gt;</span>
+<span id="L4" class="LineNrMain">4 </span>    <span class="htmlTag">&lt;</span><span class="Statement">br</span><span class="htmlTag">&gt;&lt;</span><span class="Statement">span</span><span class="htmlTag">&gt;</span>In the equities market, a conditional bid or offer. &quot;My bid or offer is not firm, but is subject to confirmation between other parties and to market changes.&quot;<span class="htmlEndTag">&lt;/</span><span class="Statement">span</span><span class="htmlEndTag">&gt;</span>
+<span id="L5" class="LineNr">  1 </span><span class="htmlEndTag">&lt;/</span><span class="Statement">html</span><span class="htmlEndTag">&gt;</span>
+<span class="LineNr">~ </span>
+<table style="border: none; border-collapse: collapse;">
+    <tbody>
+        <tr>
+            <col/><col/><col style="width: 100%; background-color: #286983;" /><col/><col/>
+            <td><span style="background-color: #286983; color: black;"> NORMAL </span></td>
+            <td><span style="background-color: #262626; color: #a9b7c6;"> treatmesubj.html </span></td>
+            <td><span>&nbsp;</span></td>
+            <td><span style="background-color: #262626; color: #a9b7c6;"> unix | utf-8 | html | 0x20 </span></td>
+            <td><span style="background-color: #f92672; color: black">  80% </span></td>
+        </tr>
+    </tbody>
+</table>
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->
