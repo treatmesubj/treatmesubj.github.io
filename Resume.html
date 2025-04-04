@@ -1,110 +1,112 @@
 <html>
     <head><meta charset="UTF-8"/>
-        <style>body { background-color: #272822; color: white; font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace; }
-        a[href] { color: #66d9ef; }
-        code { color: #ae81ff; background-color: #272b33; border-radius: 6px; }
-        table, th, td { border: 1px solid; border-collapse: collapse; padding-left: 16px; padding-right: 16px; text-align: center; white-space: nowrap; }
-        h1, h2, h3, h4, h5 { margin-top: 0px; margin-bottom: 0px; }
-        p { margin-top: 0px; }
-        html, body { text-size-adjust: none; -webkit-text-size-adjust: none; -moz-text-size-adjust: none; -ms-text-size-adjust: none; }
-        .clipit:hover { cursor: pointer; }
-        .clipit:hover path { fill: yellow; cursor: pointer; }
-        .clipit:active path { fill: #00bfff; }</style>
-    <script>
-        function copyTextToClipboard(text) {
-            navigator.clipboard.writeText(text).then(function() {
-              console.log('Async: Copying to clipboard was successful!');
-            }, function(err) {
-              console.error('Async: Could not copy text: ', err);
+        <style>
+            body { background-color: #272822; color: white; font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace; }
+            a[href] { color: #66d9ef; }
+            code { color: #ae81ff; background-color: #272b33; border-radius: 6px; }
+            table, th, td { border: none; border-collapse: collapse; padding-left: 4px; padding-right: 4px; white-space: nowrap; }
+            table { width: 100%; }
+            .lefty { text-align: left; }
+            .righty { text-align: right; }
+            h1, h2, h3, h4, h5 { margin-top: 0px; margin-bottom: 0px; }
+            p { margin-top: 0px; }
+            html, body { text-size-adjust: none; -webkit-text-size-adjust: none; -moz-text-size-adjust: none; -ms-text-size-adjust: none; }
+            .clipit:hover { cursor: pointer; }
+            .clipit:hover path { fill: yellow; cursor: pointer; }
+            .clipit:active path { fill: #00bfff; }
+        </style>
+        <script>
+            function copyTextToClipboard(text) {
+                navigator.clipboard.writeText(text).then(function() {
+                  console.log('Async: Copying to clipboard was successful!');
+                }, function(err) {
+                  console.error('Async: Could not copy text: ', err);
+                });
+            }
+            window.addEventListener("DOMContentLoaded", (event) => {
+                document.querySelector('svg.cp-email').addEventListener('click', function(event) {
+                  copyTextToClipboard('hupperts.john@outlook.com');
+                });
+                document.querySelector('svg.cp-li').addEventListener('click', function(event) {
+                  copyTextToClipboard(document.querySelector('a.cp-li').href);
+                });
+                document.querySelector('svg.cp-pf').addEventListener('click', function(event) {
+                  copyTextToClipboard(document.querySelector('a.cp-pf').href);
+                });
+                document.querySelector('svg.cp-gh').addEventListener('click', function(event) {
+                  copyTextToClipboard(document.querySelector('a.cp-gh').href);
+                });
+                document.querySelector('svg.cp-thesr').addEventListener('click', function(event) {
+                  copyTextToClipboard(document.querySelector('a.cp-thesr').href);
+                });
+                document.querySelector('svg.cp-swe').addEventListener('click', function(event) {
+                  copyTextToClipboard(document.querySelector('ul.cp-swe').innerText);
+                });
+                document.querySelector('svg.cp-ds').addEventListener('click', function(event) {
+                  copyTextToClipboard(document.querySelector('ul.cp-ds').innerText);
+                });
+                document.querySelector('svg.cp-fa').addEventListener('click', function(event) {
+                  copyTextToClipboard(document.querySelector('ul.cp-fa').innerText);
+                });
             });
-        }
-        window.addEventListener("DOMContentLoaded", (event) => {
-            document.querySelector('svg.cp-email').addEventListener('click', function(event) {
-              copyTextToClipboard('hupperts.john@outlook.com');
-            });
-            document.querySelector('svg.cp-li').addEventListener('click', function(event) {
-              copyTextToClipboard(document.querySelector('a.cp-li').href);
-            });
-            document.querySelector('svg.cp-pf').addEventListener('click', function(event) {
-              copyTextToClipboard(document.querySelector('a.cp-pf').href);
-            });
-            document.querySelector('svg.cp-gh').addEventListener('click', function(event) {
-              copyTextToClipboard(document.querySelector('a.cp-gh').href);
-            });
-            document.querySelector('svg.cp-thesr').addEventListener('click', function(event) {
-              copyTextToClipboard(document.querySelector('a.cp-thesr').href);
-            });
-            document.querySelector('svg.cp-swe').addEventListener('click', function(event) {
-              copyTextToClipboard(document.querySelector('ul.cp-swe').innerText);
-            });
-            document.querySelector('svg.cp-ds').addEventListener('click', function(event) {
-              copyTextToClipboard(document.querySelector('ul.cp-ds').innerText);
-            });
-            document.querySelector('svg.cp-fa').addEventListener('click', function(event) {
-              copyTextToClipboard(document.querySelector('ul.cp-fa').innerText);
-            });
-        });
-    </script>
+        </script>
     </head>
-<body style="max-width: 960px">
-<h1>John Hupperts</h1>
-<p>
+<body style="position: relative; margin-top: 48px; margin-bottom: 48px; margin-left: 32px; margin-right: 32px;">
+<h2 style="text-align: center;">John Hupperts</h2>
+<p style="text-align: center; margin-bottom: 0px;">
     <a class="cp-email" href="mailto:hupperts.john@outlook.com" target="_blank">hupperts.john@outlook.com</a>
-        <svg class="clipit cp-email" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16" data-view-component="true">
+        <svg class="clipit cp-email" aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true">
             <path fill="#9198a1" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path>
             <path fill="#9198a1" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
         </svg>
-    <br>
     <a class="cp-li" href="https://www.linkedin.com/in/john-hupperts/" target="_blank">linkedin.com/in/john-hupperts</a>
-        <svg class="clipit cp-li" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16" data-view-component="true">
-            <path fill="#9198a1" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path>
-            <path fill="#9198a1" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
-        </svg>
-    <br>
-    <a class="cp-pf" href="https://treatmesubj.github.io" target="_blank">treatmesubj.github.io</a>
-        <svg class="clipit cp-pf" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16" data-view-component="true">
-            <path fill="#9198a1" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path>
-            <path fill="#9198a1" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
-        </svg>
-    <br>
-    <a class="cp-gh" href="https://github.com/treatmesubj" target="_blank">github.com/treatmesubj</a>
-        <svg class="clipit cp-gh" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16" data-view-component="true">
-            <path fill="#9198a1" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path>
-            <path fill="#9198a1" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
-        </svg>
-    <br>
-    <a class="cp-thesr" href="https://thesr.online" target="_blank">thesr.online</a>
-        <svg class="clipit cp-thesr" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16" data-view-component="true">
+        <svg class="clipit cp-li" aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true">
             <path fill="#9198a1" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path>
             <path fill="#9198a1" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
         </svg>
 </p>
-<h2>💼 Work Experience</h2>
+<p style="text-align: center; margin-bottom: 0px;">
+    <a class="cp-pf" href="https://treatmesubj.github.io" target="_blank">treatmesubj.github.io</a>
+        <svg class="clipit cp-pf" aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true">
+            <path fill="#9198a1" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path>
+            <path fill="#9198a1" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+        </svg>
+    <a class="cp-gh" href="https://github.com/treatmesubj" target="_blank">github.com/treatmesubj</a>
+        <svg class="clipit cp-gh" aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true">
+            <path fill="#9198a1" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path>
+            <path fill="#9198a1" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+        </svg>
+    <a class="cp-thesr" href="https://thesr.online" target="_blank">thesr.online</a>
+        <svg class="clipit cp-thesr" aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true">
+            <path fill="#9198a1" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path>
+            <path fill="#9198a1" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+        </svg>
+</p><br>
+<h3>💼 Work Experience</h3>
 <hr/>
-
 <table>
     <tbody>
         <tr>
-            <td><b>Software Engineer</b> - Enterprise Data Engineering</td>
-            <td>Jan '24 - Present</td>
+            <td class="lefty"><i><b>Software Engineer</b> - Enterprise Data Engineering</i></td>
+            <td class="righty"><i>Jan '24 - Present</i></td>
         </tr>
         <tr>
-            <td>IBM</td>
-            <td>Austin, Texas</td>
+            <td class="lefty">IBM</td>
+            <td class="righty">Austin, Texas</td>
         </tr>
     </tbody>
 </table>
+<svg class="clipit cp-swe" style="float: right; padding-right: 48px; padding-top: 8px;" aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true">
+    <path fill="#9198a1" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path>
+    <path fill="#9198a1" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
 <ul class="cp-swe">
-    <svg class="clipit cp-swe" style="float: right; padding-right: 96px;" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16" data-view-component="true">
-        <path fill="#9198a1" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path>
-        <path fill="#9198a1" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
-    </svg>
-    <li>Support Enterprise Performance Management platform (&gt;25k active users)</li>
-        <ul><li>Integrated Data Warehousing &amp; services for IBM's ledger &amp; operational reporting</li></ul>
-    <li>Contribute features/fixes to ETL framework (&gt;60kloc; K8s, Docker, Python, Spark, Airflow)</li>
+    <li>Support Enterprise Performance Management platform (25k active users)</li>
+        <ul><li>Data Warehousing &amp; Business Intelligence services for ledger &amp; operations</li></ul>
+    <li>Enhance ETL framework (60kloc; Kubernetes, Docker, Python, Spark, Airflow)</li>
         <ul><li>connectors, transforms, dev-tools, unit-tests</li></ul>
     <li>Discovery &amp; design of business requirements w/ Data Architects &amp; Product Owners</li>
-    <li>Develop ETL pipelines (~1500kloc; custom K8s resources; YAML, PySpark, SQL)</li>
+    <li>Develop ETL pipelines (~1500kloc; custom K8s resources; YAML, Python, Spark, SQL)</li>
         <ul><li>Jenkins/Travis CI/CD builds, tests, deployments</li></ul>
     <li>Iteration planning, on-call Production support, documentation</li>
 </ul>
@@ -112,20 +114,20 @@
 <table>
     <tbody>
         <tr>
-            <td><b>Data Specialist</b> - Chief Data Office</td>
-            <td>Aug '21 - Dec '23</td>
+            <td class="lefty"><b><i>Data Specialist</b> - Chief Data Office</i></td>
+            <td class="righty"><i>Aug '21 - Dec '23</i></td>
         </tr>
         <tr>
-            <td>IBM</td>
-            <td>Austin, Texas</td>
+            <td class="lefty">IBM</td>
+            <td class="righty">Austin, Texas</td>
         </tr>
     </tbody>
 </table>
+<svg class="clipit cp-ds" style="float: right; padding-right: 48px; padding-top: 8px;" aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true">
+    <path fill="#9198a1" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path>
+    <path fill="#9198a1" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
 <ul class="cp-ds">
-    <svg class="clipit cp-ds" style="float: right; padding-right: 96px;" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16" data-view-component="true">
-        <path fill="#9198a1" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path>
-        <path fill="#9198a1" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
-    </svg>
     <li>Support IBM Cognitive Enterprise Data Platform &amp; datalake projects</li>
     <li>DevOps
         <ul><li>Build, Upgrade, Deploy information systems applications</li></ul>
@@ -133,10 +135,10 @@
     </li>
     <li>Data Engineering
         <ul><li>Integrate data from disparate technologies &amp; formats</li></ul>
-        <ul><li>Develop/Maintain ETL pipelines (Spark, Airflow)</li></ul>
+        <ul><li>Develop/Maintain ETL pipelines (Python, SQL, Spark, Airflow)</li></ul>
     </li>
     <li>Database Administration (DBA)
-        <ul><li>Administer DB2 tables, views, users, roles, etc. </li></ul>
+        <ul><li>Administer DB2 tables, views, users, roles </li></ul>
     </li>
     <li>Project Lead - Discovery</li>
 </ul>
@@ -144,33 +146,33 @@
 <table>
     <tbody>
         <tr>
-            <td><b>Financial Analyst</b> - Systems</td>
-            <td>Jul '20 - Aug '21</td>
+            <td class="lefty"><i><b>Financial Analyst</b> - Systems</i></td>
+            <td class="righty"><i>Jul '20 - Aug '21</i></td>
         </tr>
         <tr>
-            <td>IBM</th>
-            <td>Minneapolis, Minnesota</td>
+            <td class="lefty">IBM</th>
+            <td class="righty">Minneapolis, Minnesota</td>
         </tr>
     </tbody>
 </table>
+<svg class="clipit cp-fa" style="float: right; padding-right: 48px; padding-top: 8px;" aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true">
+    <path fill="#9198a1" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path>
+    <path fill="#9198a1" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
 <ul class="cp-fa">
-    <svg class="clipit cp-fa" style="float: right; padding-right: 96px;" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16" data-view-component="true">
-        <path fill="#9198a1" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path>
-        <path fill="#9198a1" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
-    </svg>
     <li>Reporting of transactional sales of IBM Infrastructure products in Americas</li>
-    <li>Financial Modeling &amp; Robotic Process Automation (RPA) - Python, SQL, PQM, VBA, etc.</li>
+    <li>Financial Modeling &amp; Robotic Process Automation (RPA) - Python, SQL, PQM, VBA, Excel</li>
 </ul>
 
 <table>
     <tbody>
         <tr>
-            <td><b>Teaching Assistant</b> - UoM FinTech/Python Bootcamp</td>
-            <td>Mar '21 - May '21</td>
+            <td class="lefty"><i><b>Teaching Assistant</b> - UoM FinTech/Python Bootcamp</i></td>
+            <td class="righty"><i>Mar '21 - May '21</i></td>
         </tr>
         <tr>
-            <td>Trilogy Education</td>
-            <td>Minneapolis, Minnesota</td>
+            <td class="lefty">Trilogy Education</td>
+            <td class="righty">Minneapolis, Minnesota</td>
         </tr>
     </tbody>
 </table>
@@ -178,29 +180,29 @@
 <table>
     <tbody>
         <tr>
-            <td><b>Co-Op Financial Analyst</b> - Federal</td>
-            <td>May '19 - Jan '20</td>
+            <td class="lefty"><i><b>Co-Op Financial Analyst</b> - Federal</i></td>
+            <td class="righty"><i>May '19 - Jan '20</i></td>
         </tr>
         <tr>
-            <td>IBM</td>
-            <td>Rochester, Minnesota</td>
+            <td class="lefty">IBM</td>
+            <td class="righty">Rochester, Minnesota</td>
         </tr>
     </tbody>
 </table>
 <br/>
 
-<h2>💡 Skills &amp; Interests</h2>
+<h3>💡 Skills &amp; Interests</h3>
 <hr/>
 <p><strong>Technical Skills</strong>: Linux🐧, Git✅, Python🐍, K8s☸, Docker🐋, Cloud☁️<br/>
 <strong>Certifications</strong>: IBM Python for Applied Data Science, Bloomberg Market Concepts,<br/>
     DevOps Essentials, Microservices: Designing Highly Scalable Systems<br/>
 <strong>Activities</strong>: Hunting, Fishing, Hockey, Golf<br/>
 <strong>Interests</strong>: Computer Science &amp; Financial Markets</p>
-<h2>🎓 Education</h2>
+<h3>🎓 Education</h3>
 <hr/>
-<h3>University of Minnesota, Duluth</h3>
+<h4>University of Minnesota, Duluth</h4>
 <p><b>Bachelor of Business Administration in Finance</b> - Graduated Spring '20<br/>
-<strong>Coursework</strong>: Financial Modeling, Public Speaking, Investment Fundamentals, etc.</p>
+<strong>Coursework</strong>: Financial Modeling, Public Speaking, Investment Fundamentals</p>
 <br>
 <br>
 </body></html>
